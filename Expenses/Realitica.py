@@ -23,7 +23,8 @@ def make_real_estate_data_frame() -> pd.DataFrame:
     url = 'https://www.realitica.com/prodaja/poslovnih+prostora/Crna-Gora/'
 
     # List of desirable cities
-    cities = ['Budva', 'Bar', 'Nercg Novi', 'Kotor', 'Tivat']
+    global cities
+    cities = ['Budva', 'Bar', 'Kotor', 'Tivat']
 
     pages = 0
     previous_block_len = 0
@@ -49,8 +50,8 @@ def make_real_estate_data_frame() -> pd.DataFrame:
                     cost = re.search(r'€(\d+.\d+.\d+|\d+.\d+|\d+)', str(div.text))
                     city = city[0]
                     if metres and cost:
-                        current_metres = float(metres.group(1).replace(',',  '').replace('.',  ''))
-                        current_cost = float(cost.group(1).replace(',',  '').replace('.',  ''))
+                        current_metres = float(metres.group(1).replace(',', '').replace('.', ''))
+                        current_cost = float(cost.group(1).replace(',', '').replace('.', ''))
                         if (current_metres != previous_metres) or (current_cost != previous_cost):
                             previous_metres = current_metres
                             previous_cost = current_cost
@@ -129,7 +130,10 @@ def make_charts_and_stats(df_cleaned_to_func) -> pd.DataFrame:
     plt.scatter(df_cleaned_to_func['Metres'], df_cleaned_to_func['Cost per meter'])
     plt.title('Metres - Price per meter (€)')
     ls = np.linspace(start=52, stop=1600, num=100000)
-    plt.plot(ls, (50000 / (ls-50)) + 1800, color='red', alpha=0.5)
+    plt.plot(ls, (50000 / (ls - 50)) + 1800, color='red', alpha=0.5)
+
+    plt.subplot(2, 2, 2)
+    # TODO
 
     plt.tight_layout()
     plt.show()
@@ -137,8 +141,42 @@ def make_charts_and_stats(df_cleaned_to_func) -> pd.DataFrame:
     return df_stat
 
 
+def get_ideal_flat_by_metres(df_clean, metres, mistake) -> pd.DataFrame:
+    """
+    Measures the cheapest option in a metres range. For each city
+
+    Args:
+        df_clean (pd.DataFrame) : the data frame we will work with
+        metres : how many metres squared we are searching for
+        mistake : what is the maximal mistake
+
+    Returns:
+        city_min (pd.DataFrame) : the data frame with cheapest options for each city
+    """
+
+    diapason = [metres - mistake, metres + mistake]
+    city_min = {city: np.inf for city in cities}
+
+    for index, row in df_clean.iterrows():
+        if diapason[0] < row['Metres'] < diapason[1]:
+            if city_min[row['City']] >= float(row['Cost per meter']):
+                city_min[row['City']] = float(row['Cost per meter'])
+
+    city_min = pd.DataFrame(
+        list(city_min.items()),  # A list of tuples
+        columns=['City', 'Min Cost per meter']
+    )
+
+    average_series = df_clean.groupby('City')['Cost per meter'].mean()
+    city_min = city_min.merge(average_series, on='City', how='left')
+    city_min = city_min.rename(columns={'Cost per meter': 'Average cost per meter'})
+
+    return city_min
+
+
 df_uncleaned = make_real_estate_data_frame()
 df_cleaned = clean_real_estate_data_frame(df_uncleaned)
+print(get_ideal_flat_by_metres(df_cleaned, 200, 50))
 df_summary = make_charts_and_stats(df_cleaned)
 
 # Save everything to Excel
