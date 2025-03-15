@@ -20,13 +20,6 @@ def get_all_links(link):
 
     df_ = pd.DataFrame()
 
-    # Get links
-    el_with_links = driver.find_elements(By.CLASS_NAME, "hfpxzc")
-    row = 0
-    for el in el_with_links:
-        df_.loc[row, "Links"] = el.get_attribute("href")
-        row += 1
-
     # Get stars
     el_with_st = driver.find_elements(By.CLASS_NAME, "MW4etd")
     row = 0
@@ -43,7 +36,7 @@ def get_all_links(link):
             .text
             .replace('(', '')
             .replace(')', '')
-            .replace(',', '.')
+            .replace(',', '')
         )
         row += 1
 
