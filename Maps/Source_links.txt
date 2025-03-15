@@ -1,0 +1,15 @@
+Budva_cafe|https://www.google.com/maps/search/cafe+in+Budva,+Montenegro/@42.292083,18.8239992,14z/data=!4m2!2m1!6e5!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Budva_barber|https://www.google.com/maps/search/barbershop+in+Budva,+Montenegro/@42.2920793,18.8239992,14z/data=!4m2!2m1!6e1!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Budva_groceries|https://www.google.com/maps/search/grocery+store+in+Budva,+Montenegro/@42.2891917,18.8333364,15z/data=!4m2!2m1!6e6!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Podgorica_cafe|https://www.google.com/maps/search/cafe+in+Podgorica,+Montenegro/@42.4364616,19.2048819,13z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Podgorica_barber|https://www.google.com/maps/search/barbershop+in+Podgorica,+Montenegro/@42.4364469,19.2048818,13z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Podgorica_groceries|https://www.google.com/maps/search/grocery+store+in+Podgorica,+Montenegro/@42.4364616,19.2048819,13z/data=!3m1!4b1!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Bar_cafe|https://www.google.com/maps/search/cafe+in+Bar,+Montenegro/@42.1091949,19.0603421,13z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Bar_barber|https://www.google.com/maps/search/barbershop+in+Bar,+Montenegro/@42.1091949,19.0603421,13z/data=!3m1!4b1!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Bar_groceries|https://www.google.com/maps/search/grocery+store+in+Bar,+Montenegro/@42.1092087,19.0603421,13.05z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Kotor_cafe|https://www.google.com/maps/search/cafe+in+Kotor,+Montenegro/@42.4269526,18.7581043,13.75z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Kotor_barber|https://www.google.com/maps/search/Barbershop+in+Kotor,+Montenegro/@42.4269526,18.7581043,13.75z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Kotor_groceries|https://www.google.com/maps/search/Grocery+store+in+Kotor,+Montenegro/@42.4269327,18.7581042,13z/data=!3m1!4b1!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Tivat_cafe|https://www.google.com/maps/search/Cafe+in+Tivat,+Montenegro/@42.4320478,18.7017077,14.97z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Tivat_barber|https://www.google.com/maps/search/Barbershop+in+Tivat,+Montenegro/@42.4320459,18.7017077,15z/data=!3m1!4b1!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
+Tivat_groceries|https://www.google.com/maps/search/Grocery+store+in+Tivat,+Montenegro/@42.4320478,18.7017077,14.97z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D
