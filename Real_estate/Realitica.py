@@ -125,14 +125,15 @@ def make_charts_and_stats(df_cleaned_to_func) -> pd.DataFrame:
     df_stat.columns = ['_'.join(col) for col in df_stat.columns]
 
     # Now we'll switch to charts
+    plt.figure(figsize=(8, 6))
     # The dependence of metres to price
-    plt.subplot(2, 2, 1)
+    plt.subplot(2, 1, 1)
     plt.scatter(df_cleaned_to_func['Metres'], df_cleaned_to_func['Cost per meter'])
     plt.title('Metres - Price per meter (€)')
     ls = np.linspace(start=52, stop=1600, num=100000)
     plt.plot(ls, (50000 / (ls - 50)) + 1800, color='red', alpha=0.5)
 
-    plt.subplot(2, 2, 2)
+    plt.subplot(2, 1, 2)
     # TODO
 
     plt.tight_layout()

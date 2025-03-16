@@ -219,6 +219,6 @@ small_df = make_small_df(df, list_of_indices)
 make_charts(small_df)
 
 # Save everything to Excel
-with pd.ExcelWriter('Output_data/World_bank_data.xlsx') as writer:
+with pd.ExcelWriter('Output_files/World_bank_data.xlsx') as writer:
     df.to_excel(writer, sheet_name='Cleaned', index=True)
     small_df.to_excel(writer, sheet_name='Small', index=True)

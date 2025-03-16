@@ -4,7 +4,13 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 
-def make_df():
+def make_df() -> pd.DataFrame:
+    """
+    The function makes a data frame with the ratings
+
+    Returns:
+        df (pd.DataFrame) : the data frame with statistics
+    """
     excel_file = pd.ExcelFile('Output_files/Stats.xlsx')
     sheet_dict = {sheet_name: excel_file.parse(sheet_name) for sheet_name in excel_file.sheet_names}
 
@@ -29,7 +35,10 @@ def make_df():
 
 def make_a_chart(df):
     """
-    TODO
+    The function makes a chart from a data frame
+
+    Args:
+        df (pd.DataFrame) : the input data frame
     """
     # Make a pivot df for charts
     df_copy = df.copy().T
@@ -54,6 +63,13 @@ def make_a_chart(df):
 
 
 def make_map(df, industry):
+    """
+        The function makes a interactive maps for an industry from a data frame.
+
+        Args:
+            df (pd.DataFrame) : the input data frame
+            industry (string) : the industry we are creating the map on
+    """
 
     coordinates = {
         'Budva': [42.289080, 18.843906],

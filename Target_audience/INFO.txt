@@ -1,0 +1,39 @@
+The "Target_audience" folder is needed to get info about the unemployed in
+    Montenegro, more specifically, answer the question: are the unemployed
+    less educated on average? We make a bar chart that proves our answer to the
+    question.
+
+
+Files:
+    Downloaded_data:
+        World_bank_stat.xlsx (Excel file) : An Excel file with data on
+            Montenegro that was downloaded from the World Bank website.
+
+    Output_files:
+        World_bank_data.xlsx (Excel file) : An Excel file with data that might be
+            interesting for our case. The "Cleaned" sheet is the cleaned version of
+            Downloaded_data/World_bank_stat.xlsx. The "Small" sheet contains
+            only the rows from "Cleaned" that we will use for the study.
+
+    Analysis.py (Python code -> Output_files/World_bank_data.xlsx) : The code
+        creates the Output_files/World_bank_data.xlsx from
+        Downloaded_data/World_bank_stat.xlsx and draws a bar chart.
+
+    INFO.txt (txt file) : the info file you are reading now.
+
+
+Sources:
+    https://www.worldbank.org/
+
+
+Steps:
+    1. Launch the Analysis.py file. The output will be
+        Output_files/World_bank_data.xlsx.
+
+
+Parsing methods used:
+    None
+
+
+People responsible:
+    Daniil

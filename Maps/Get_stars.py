@@ -3,9 +3,16 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 
 
-def get_all_links(link):
+def get_all_links(link) -> pd.DataFrame:
     """
-    TODO
+    The function goes through a webpage, waits until the user scrolls down manually
+        and gets all the valuable information.
+
+    Args:
+        link (str) : the link on Google Maps
+
+    Returns:
+        df_ (pd.DataFrame) : the data frame with results
     """
 
     # First, initialise webdriver

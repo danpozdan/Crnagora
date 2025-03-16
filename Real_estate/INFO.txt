@@ -1,0 +1,34 @@
+The "Real_estate" folder is needed to calculate the cost of real estate. We parsed
+    data on the cost of non-residential property in Montenegro and analysed it.
+    We calculated the price per square meter, made a function that finds the average
+    price for meter, given the approximate footage. Then, some inferences about the
+    cost were made.
+
+
+Files:
+    Data:
+        Realitica.xlsx (Excel file) : An Excel file with the prices, footage, and
+            city names for all non-residential property in 4 cities.
+
+    Realitica.py (Python code -> Data/Realitica.xlsx) : The code makes the
+        Data/Realitica.xlsx file and draws some charts. In addition, the
+        aforementioned function is here.
+
+    INFO.txt (txt file) : the info file you are reading now.
+
+
+Sources:
+    www.realitica.com/
+
+
+Steps:
+    1. Launch the Realitica.py file
+    2. See the results (Realitica.xlsx + chats)
+
+
+Parsing methods used:
+    BeautifulSoup
+
+
+People responsible:
+    Daniil

@@ -1,0 +1,46 @@
+The "Maps" folder is needed to analyse which industries are developed better
+    and where exactly are they. We parse data on reviews on Google Maps and
+    analyse it, by making maps, tables, etc.
+
+
+Files:
+    Output_files:
+        Stars.xlsx (Excel file) : An Excel file with data on ratings by field and
+            city.
+        Analysed_stats.xlsx (Excel file) : An Excel file with analysis of the
+            Stars.xlsx file.
+
+    Source_links.txt (txt file) : a text file with the links to maps that we
+        want to parse. More precisely, each line is structured in the following
+        way: name|link
+
+    Get_stars.py (Python code -> Output_files/Stars.xlsx) : The code goes through
+        all the links in Source_links.txt and parses the data needed (stars and
+        number of reviews). The only problem with it that it doesn't know how to
+        scroll down the website, thus we did it manually, which took no more than
+        5 minutes in total.
+
+    Analyse_data.py (Python code -> Output_files/Analysed_stats.xlsx) : Analyse
+        the data from Output_files/Stars.xlsx. Draw charts and maps.
+
+    INFO.txt (txt file) : the info file you are reading now.
+
+
+Sources:
+    https://www.google.com/maps/
+
+
+Steps:
+    1. Launch the Get_stars.py file. The output will be Output_files/Stars.xlsx.
+    2. Launch the Analyse_data.py. The output will be Output_files/
+        Analysed_stats.xlsx. Also, maps will appear.
+    3. If you want to see charts, remove the "#" in the end of the Analyse_data.py
+        code and repeat step 2.
+
+
+Parsing methods used:
+    Selenium
+
+
+People responsible:
+    Daniil
