@@ -16,7 +16,7 @@ import os
 import matplotlib.pyplot as plt
 import re
 
-def parse_table(url=''):
+def parse_table(url='https://svspb.net/danmark/bjudzhet.php?l=chernogorija'):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
     response = requests.get(url, headers=headers)
     html = response.text
