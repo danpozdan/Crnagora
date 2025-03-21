@@ -64,7 +64,7 @@ def show_saldo(df):
     plt.plot(df['Год'], df['Сальдо'].astype(float))
     plt.title('Сальдо государственного бюджета Черногории по годам')
     plt.xlabel('Год')
-    plt.ylabel('Сальдо')
+    plt.ylabel('Сальдо (млрд. €)')
     plt.grid(True)
 
 print(show_saldo(fix(parse_table())))
